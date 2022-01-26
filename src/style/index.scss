@@ -1,0 +1,76 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: rgb(0, 0, 0);
+  padding: 5% 5%;
+
+}
+.h1_title {
+  color: #D20A32;
+  font-size: 60px;
+  font-family: 'Roboto-Bold', sans-serif;
+}
+
+
+h1 {
+  color: #D20A32;
+  font-size: 60px;
+  font-family: 'Roboto-Bold', sans-serif;
+  text-decoration: none;
+}
+
+h2 {
+  color:white;
+  font-size: 20px;
+  margin-top: 3rem;
+  text-decoration: none;
+}
+
+.h2_title {
+  font-size: 65px;
+}
+
+
+h3 {
+  color: white;
+  font-size: 20px;
+  margin-top: 3rem;
+}
+
+.article_name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 5%;
+  justify-content: center;
+}
+
+.game_img {
+  display: flex;
+  width: 18rem;
+  height: 18rem;
+}
+
+.title_game{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cardGame {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+
+}
+
+.articles {
+  display:flex;
+  flex-wrap: wrap;
+}
+a {
+  text-decoration:none;
+}
