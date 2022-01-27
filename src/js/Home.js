@@ -2,12 +2,10 @@ const Home = (argument = '') => {
   const preparePage = () => {
     const cleanedArgument = argument.replace(/\s+/g, "-");
 
-
     const searchGame = () => {
-      let gameSearched = document.getElementById("search");
+      let gameSearched = document.getElementById("searchInput");
       gameSearched.addEventListener("keydown", function () {
-        if (element.keyCode == 13) { //=> event = element
-          console.log("coucou");
+        if (event.keyCode == 13) {
           let gameValue = gameSearched.value;
           gameValue = gameValue.replace(/\s+/g, "-");
           window.location.href = `#/${gameValue}`;
@@ -15,7 +13,7 @@ const Home = (argument = '') => {
       });
     };
     searchGame();
-
+    
     const displayResults = (articles) => {
       const resultsContent = articles.map((article) => (
         `<article class="cardGame col-4 mt-4 pt-2">
@@ -50,29 +48,41 @@ const Home = (argument = '') => {
 
   const render = () => {
     pageContent.innerHTML = `
-<container>
-  <div class="article">
-    <h1 class="h1_title mt-4"><a href="#">The Hyper Progame</a>
-      <input id="search" type="text" class="search my-auto" placeholder="Find a Fucking Game !" /></h1>
+  <container>
+    <div class="article">
+      <h1 class="h1_title mt-4"><a href="#">The Hyper Progame</a>
+        <input id="searchInput" type="text" class="search my-auto mt-3" placeholder="Find a Fucking Game !" />
+        </h1>
+      <h2 class="h2_title mt-4">Welcome,</h2>
 
-    <h2 class="h2_title mt-4">Welcome,</h2>
-
-    <h3 class="mt-5">The Hyper Progame is the world's premier event for computer and video games and related products.
-      At The Hyper Progame, the video game industry's top talent pack the Los Angeles Convention Center, connecting tens
-      of thousands of the best, brightest, and most innovative in the interactive entertainment industry. For Three
-      exciting days, leading-edge-companies, groundbreaking new technologies, and never-before-seed products will be
-      showcased. The Hyper Progame connects you with both new and existing parners, industry executives, gamers, and
-      social influencers providing unprecedented exposure to the entire video game industry, all under one roof. This
-      next seems familiar.</h3>
-  </div>
-
-</container>
-<section class="page-list">
+      <h3 class="mt-5">The Hyper Progame is the world's premier event for computer and video games and related products.
+        At The Hyper Progame, the video game industry's top talent pack the Los Angeles Convention Center, connecting tens
+        of thousands of the best, brightest, and most innovative in the interactive entertainment industry. For Three
+        exciting days, leading-edge-companies, groundbreaking new technologies, and never-before-seed products will be
+        showcased. The Hyper Progame connects you with both new and existing parners, industry executives, gamers, and
+        social influencers providing unprecedented exposure to the entire video game industry, all under one roof. This
+        next seems familiar.</h3>
+    </div>
+  </container>
+  <section class="page-list">
   <div class="articles col-12 flex-wrap">...loading
-    <div class="all_game col-4" </div> </section> `;
+  <div class="all_game col-4" </div> 
+  </section> `;
     preparePage();
   };
   render();
+  
+
+  // const searchInput = document.querySelector('#searchInput');
+  // const searchButton = document.querySelector('.searchButton');
+
+  // searchButton.addEventListener('click', e => {
+
+  //   e.preventDefault();
+  //   window.location.hash = `#/${searchInput.value}`;
+  // })
+
+
 };
 export {
   Home

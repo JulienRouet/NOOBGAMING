@@ -23,6 +23,7 @@ npm run test
 👤 **ROUET JULIEN**
 
 * Github: [@https:\/\/github.com\/JulienRouet]
+* Github Pages : [@https://julienrouet.github.io/NOOBGAMING/]
 
 ## Show your support
 
